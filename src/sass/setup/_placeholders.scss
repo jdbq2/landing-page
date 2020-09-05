@@ -1,0 +1,47 @@
+%bg-btn {
+  min-width: 250px;
+  min-height: 50px;
+  border: none;
+  border-radius: $borderRadious;
+  font-family: $principalFont;
+  font-size: fs(m);
+  font-weight: 500;
+  padding: 10px;
+  color: $white;
+  background: $gradient;
+  box-shadow: $shadow;
+  margin: 10px;
+}
+%sm-btn {
+  min-width: 150px;
+  min-height: 50px;
+  border: none;
+  border-radius: $borderRadious;
+  font-family: $principalFont;
+  font-size: fs(m);
+  font-weight: 500;
+  padding: 10px;
+  color: $white;
+  background: $gradient;
+  box-shadow: $shadow;
+  margin: 10px;
+}
+%transparent-btn {
+  min-width: 200px;
+  min-height: 50px;
+  border: 1px solid $secondary;
+  border-radius: $borderRadious;
+  font-family: $principalFont;
+  font-size: fs(m);
+  font-weight: 500;
+  padding: 10px;
+  color: $secondary;
+  background: transparent;
+  box-shadow: $shadow;
+  margin: 10px;
+}
+
+%text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}

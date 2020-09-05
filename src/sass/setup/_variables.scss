@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+// COLORS----------------------------------------------------
+$black: #463f3a;
+$darkGray: #8a817c;
+$ligthGray: #bcb8b1;
+$white: #f4f3ee;
+$secondary: rgba(63, 94, 251, 1);
+$gradient: linear-gradient(
+  90deg,
+  rgba(63, 94, 251, 1) 0%,
+  rgba(252, 70, 107, 1) 100%
+);
+// FONTS--------------------------------------------------------
+$principalFont: "Ubuntu", sans-serif;
+$secondaryFont: "Lora", serif;
+$fs: (
+  xl: 500%,
+  l: 320%,
+  m: 200%,
+  s: 100%,
+  xs: 80%,
+);
+//SHADOW---------------------------------------------------------
+$shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
+//LAYOUT STYLES---------------------------------------------------------
+$bp: (
+  xl: 1200px,
+  l: 1000px,
+  m: 700px,
+  s: 410px,
+);
+$borderRadious: 20px;

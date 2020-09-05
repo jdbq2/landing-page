@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+.heroWraper__form__button {
+  min-width: 150px;
+  min-height: 50px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 200%;
+  font-weight: 500;
+  padding: 10px;
+  color: #f4f3ee;
+  background: linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+  box-shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
+  margin: 10px;
+}
+
+.header__button {
+  min-width: 200px;
+  min-height: 50px;
+  border: 1px solid #3f5efb;
+  border-radius: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 200%;
+  font-weight: 500;
+  padding: 10px;
+  color: #3f5efb;
+  background: transparent;
+  box-shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
+  margin: 10px;
+}
+
+.heroWraper__conditions, .heroWraper__text, .heroWraper__title {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.header {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  background: #f4f3ee;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: -1000;
+}
+@media only screen and (min-width: 1000px) {
+  .header {
+    position: initial;
+    min-height: 20%;
+    flex-direction: initial;
+    left: 0;
+  }
+}
+.header__logo {
+  width: 40%;
+  margin: 10px;
+}
+@media only screen and (min-width: 700px) {
+  .header__logo {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .header__logo {
+    width: 7%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header__logo {
+    width: 6%;
+  }
+}
+.header__logo img {
+  width: 100%;
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.header__nav__menu {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1000px) {
+  .header__nav__menu {
+    flex-direction: initial;
+  }
+}
+.header__nav__menu__item {
+  text-decoration: none;
+  color: #463f3a;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 200%;
+  font-weight: 900;
+  margin: 10px;
+  list-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+@media only screen and (min-width: 700px) {
+  .header__nav__menu__item {
+    font-size: 320%;
+    margin: 30px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .header__nav__menu__item {
+    font-size: 200%;
+    margin: 10px;
+  }
+}
+.header__nav__menu__item:hover {
+  transform: scale(1.1);
+  color: #8a817c;
+}
+.header__button {
+  transition: all 0.3s ease-in-out;
+}
+@media only screen and (min-width: 700px) {
+  .header__button {
+    width: 330px;
+    height: 80px;
+    font-size: 320%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .header__button {
+    width: initial;
+    height: initial;
+    font-size: 200%;
+  }
+}
+.header__button:hover {
+  background-color: #3f5efb;
+  color: #f4f3ee;
+}
+
+.mobile__trigger {
+  min-width: 60px;
+  min-height: 60px;
+  border: 3px solid #8a817c;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  top: 5%;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media only screen and (min-width: 410px) {
+  .mobile__trigger {
+    min-width: 90px;
+    min-height: 90px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .mobile__trigger {
+    display: none;
+  }
+}
+.mobile__trigger__item--1 {
+  min-width: 30px;
+  min-height: 3px;
+  background: #bcb8b1;
+  margin: 4px;
+}
+@media only screen and (min-width: 410px) {
+  .mobile__trigger__item--1 {
+    min-width: 40px;
+    min-height: 5px;
+  }
+}
+.mobile__trigger__item--2 {
+  min-width: 30px;
+  min-height: 3px;
+  background: #bcb8b1;
+  margin: 4px;
+}
+@media only screen and (min-width: 410px) {
+  .mobile__trigger__item--2 {
+    min-width: 40px;
+    min-height: 5px;
+  }
+}
+.mobile__trigger__item--3 {
+  min-width: 30px;
+  min-height: 3px;
+  background: #bcb8b1;
+  margin: 4px;
+}
+@media only screen and (min-width: 410px) {
+  .mobile__trigger__item--3 {
+    min-width: 40px;
+    min-height: 5px;
+  }
+}
+
+.main {
+  min-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+@media only screen and (min-width: 700px) {
+  .hero {
+    margin-top: 150px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .hero {
+    margin-top: 80px;
+    flex-direction: initial;
+  }
+}
+.hero__svg {
+  width: 90%;
+  height: 100%;
+  margin-top: 60px;
+}
+@media only screen and (min-width: 1000px) {
+  .hero__svg {
+    max-width: 50%;
+  }
+}
+.hero__svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heroWraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 1000px) {
+  .heroWraper {
+    max-width: 40%;
+  }
+}
+.heroWraper__title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 500%;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-weight: 200;
+  color: #463f3a;
+}
+.heroWraper__text {
+  font-family: "Lora", serif;
+  font-size: 200%;
+  margin: 20px 10px 10px 15px;
+  color: #463f3a;
+}
+.heroWraper__form {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #8a817c;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.heroWraper__form__input {
+  border-style: none;
+  width: 70%;
+  margin-left: 10px;
+  margin-right: 5px;
+  line-height: 100%;
+  font-size: 150%;
+  font-family: "Lora", serif;
+}
+@media only screen and (min-width: 410px) {
+  .heroWraper__form__input {
+    font-size: 200%;
+  }
+}
+.heroWraper__form__button {
+  font-size: 160%;
+  min-width: 40%;
+  margin: 0;
+  margin-right: 5px;
+  transition: transform 0.3s;
+}
+@media only screen and (min-width: 410px) {
+  .heroWraper__form__button {
+    font-size: 200%;
+  }
+}
+.heroWraper__form__button:hover {
+  transform: scale(1.2);
+}
+.heroWraper__conditions {
+  width: 85%;
+  font-family: "Lora", serif;
+  font-size: 100%;
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=/main.07544d9b.css.map */

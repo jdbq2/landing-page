@@ -1,0 +1,20 @@
+{
+  "name": "landing_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "Juan Diego Bohorquez <jdbq2@hotmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "gsap": "^3.5.1"
+  }
+}

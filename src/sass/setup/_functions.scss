@@ -1,0 +1,6 @@
+@function fs($fontSize) {
+  @return map-get($fs, $fontSize);
+}
+@function bp($breakPoint) {
+  @return map-get($bp, $breakPoint);
+}
