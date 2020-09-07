@@ -14329,6 +14329,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _gsap.default.registerPlugin(_all.ScrollTrigger);
 
+var heroContainer = document.getElementById("hero");
 var heroTitle = document.getElementById("heroTitle");
 var heroText = document.getElementById("heroText");
 var heroForm = document.getElementById("heroForm");
@@ -14369,13 +14370,161 @@ _gsap.default.from(heroSvg, {
     start: "top 80%"
   }
 });
+},{"gsap":"../node_modules/gsap/index.js","gsap/all":"../node_modules/gsap/all.js"}],"js/benefits.js":[function(require,module,exports) {
+"use strict";
+
+var _gsap = _interopRequireDefault(require("gsap"));
+
+var _all = require("gsap/all");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var benefit1 = document.getElementById("benefit1");
+var benefit2 = document.getElementById("benefit2");
+var benefit3 = document.getElementById("benefit3");
+
+_gsap.default.registerPlugin(_all.ScrollTrigger);
+
+if (window.innerWidth >= 770) {
+  _gsap.default.from(benefit1, {
+    duration: 1,
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+      trigger: benefit1,
+      start: "top 80%"
+    }
+  });
+
+  _gsap.default.from(benefit2, {
+    duration: 1,
+    opacity: 0,
+    delay: 0.3,
+    y: 100,
+    scrollTrigger: {
+      trigger: benefit2,
+      start: "top 80%"
+    }
+  });
+
+  _gsap.default.from(benefit3, {
+    duration: 1,
+    opacity: 0,
+    delay: 0.6,
+    y: 100,
+    scrollTrigger: {
+      trigger: benefit3,
+      start: "top 80%"
+    }
+  });
+} else {
+  _gsap.default.from(benefit1, {
+    duration: 1,
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+      trigger: benefit1,
+      start: "top 80%"
+    }
+  });
+
+  _gsap.default.from(benefit2, {
+    duration: 1,
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+      trigger: benefit2,
+      start: "top 80%"
+    }
+  });
+
+  _gsap.default.from(benefit3, {
+    duration: 1,
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+      trigger: benefit3,
+      start: "top 80%"
+    }
+  });
+}
+},{"gsap":"../node_modules/gsap/index.js","gsap/all":"../node_modules/gsap/all.js"}],"js/helpyou.js":[function(require,module,exports) {
+"use strict";
+
+var _gsap = _interopRequireDefault(require("gsap"));
+
+var _all = require("gsap/all");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var helpYouTitle = document.getElementById("helpyoutitle");
+var helpYou1 = document.getElementById("helpyou1");
+var helpYou2 = document.getElementById("helpyou2");
+var helpYou3 = document.getElementById("helpyou3");
+var helpYouSvg = document.getElementById("helpyousvg");
+
+_gsap.default.registerPlugin(_all.ScrollTrigger);
+
+_gsap.default.from(helpYouTitle, {
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  scrollTrigger: {
+    trigger: helpYouTitle,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(helpYou1, {
+  duration: 1,
+  opacity: 0,
+  x: 100,
+  scrollTrigger: {
+    trigger: helpYou1,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(helpYou2, {
+  duration: 1,
+  opacity: 0,
+  x: -100,
+  scrollTrigger: {
+    trigger: helpYou2,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(helpYou3, {
+  duration: 1,
+  opacity: 0,
+  x: 100,
+  scrollTrigger: {
+    trigger: helpYou3,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(helpYouSvg, {
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  scrollTrigger: {
+    trigger: helpYouSvg,
+    start: "top 80%"
+  }
+});
 },{"gsap":"../node_modules/gsap/index.js","gsap/all":"../node_modules/gsap/all.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("./menu");
 
 require("./hero");
-},{"./menu":"js/menu.js","./hero":"js/hero.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./benefits");
+
+require("./helpyou");
+},{"./menu":"js/menu.js","./hero":"js/hero.js","./benefits":"js/benefits.js","./helpyou":"js/helpyou.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14403,7 +14552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62281" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54050" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

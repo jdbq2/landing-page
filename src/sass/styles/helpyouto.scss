@@ -1,0 +1,88 @@
+.helpyouto {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include respond-to(map-get($bp, l)) {
+    flex-direction: initial;
+    justify-content: center;
+  }
+  &__svg {
+    width: 80%;
+    order: 2;
+    margin: 20px;
+    @include respond-to(map-get($bp, l)) {
+      width: 45%;
+      order: 0;
+    }
+  }
+  &__items {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include respond-to(map-get($bp, l)) {
+      width: 45%;
+    }
+    &__title {
+      &__h1 {
+        @extend %text;
+        font-family: $principalFont;
+        font-weight: 500;
+        font-size: fs(l);
+        color: $black;
+        margin-bottom: 15px;
+        text-align: center;
+        @include respond-to(map-get($bp, l)) {
+          font-size: fs(xl);
+          text-align: start;
+          text-align: initial;
+        }
+      }
+      width: 100%;
+      border-bottom: 1px solid $ligthGray;
+    }
+    &__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      border-bottom: 1px solid $ligthGray;
+      &__number {
+        width: 100%;
+        font-family: $secondaryFont;
+        color: $darkGray;
+        margin-top: 15px;
+      }
+      &__title {
+        @extend %text;
+        font-family: $principalFont;
+        color: $black;
+        margin-top: 15px;
+        font-size: fs(m);
+        margin-bottom: 5px;
+        width: 90%;
+        & span {
+          color: $secondary;
+        }
+        @include respond-to(map-get($bp, l)) {
+          font-size: fs(l);
+          width: 95%;
+        }
+      }
+      &__text {
+        @extend %text;
+        font-family: $secondaryFont;
+        font-size: fs(m);
+        margin-bottom: 30px;
+        width: 90%;
+        @include respond-to(map-get($bp, l)) {
+          width: 95%;
+        }
+      }
+    }
+  }
+}
