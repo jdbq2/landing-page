@@ -5543,22 +5543,37 @@ var MENU_BUTTON = document.getElementById("mobileMenu");
 var WINDOW = window;
 var LINE1 = document.getElementById("item1");
 var LINE3 = document.getElementById("item3");
+var LINK1 = document.getElementById("link1");
+var LINK2 = document.getElementById("link2");
+var LINK3 = document.getElementById("link3");
 var itsOpen = false;
 WINDOW.addEventListener("resize", handleResize);
 
 if (window.innerWidth <= 1000) {
   MENU.style.left = "-1000px";
   MENU_BUTTON.addEventListener("click", handleMenuClick);
+  LINK1.addEventListener("click", handleMenuClick);
+  LINK2.addEventListener("click", handleMenuClick);
+  LINK3.addEventListener("click", handleMenuClick);
 } else {
   MENU_BUTTON.removeEventListener("click", handleMenuClick);
+  LINK1.removeEventListener("click", handleMenuClick);
+  LINK2.removeEventListener("click", handleMenuClick);
+  LINK3.removeEventListener("click", handleMenuClick);
 }
 
 function handleResize(e) {
   if (e.target.outerWidth <= 1000) {
     itsOpen ? MENU.style.left = "0px" : MENU.style.left = "-1000px";
     MENU_BUTTON.addEventListener("click", handleMenuClick);
+    LINK1.addEventListener("click", handleMenuClick);
+    LINK2.addEventListener("click", handleMenuClick);
+    LINK3.addEventListener("click", handleMenuClick);
   } else {
     MENU_BUTTON.removeEventListener("click", handleMenuClick);
+    LINK1.removeEventListener("click", handleMenuClick);
+    LINK2.removeEventListener("click", handleMenuClick);
+    LINK3.removeEventListener("click", handleMenuClick);
   }
 }
 
@@ -14329,7 +14344,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _gsap.default.registerPlugin(_all.ScrollTrigger);
 
-var heroContainer = document.getElementById("hero");
 var heroTitle = document.getElementById("heroTitle");
 var heroText = document.getElementById("heroText");
 var heroForm = document.getElementById("heroForm");
@@ -14514,6 +14528,109 @@ _gsap.default.from(helpYouSvg, {
     start: "top 80%"
   }
 });
+},{"gsap":"../node_modules/gsap/index.js","gsap/all":"../node_modules/gsap/all.js"}],"js/easytouse.js":[function(require,module,exports) {
+"use strict";
+
+var _gsap = _interopRequireDefault(require("gsap"));
+
+var _all = require("gsap/all");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var easyToUseTitle = document.getElementById("easytousetitle");
+var easyToUseText = document.getElementById("easytousetext");
+var easyToUseButton = document.getElementById("easytousebutton");
+var easyToUseSvg = document.getElementById("easytousesvg");
+
+_gsap.default.registerPlugin(_all.ScrollTrigger);
+
+_gsap.default.from(easyToUseTitle, {
+  duration: 1,
+  opacity: 0,
+  ease: "power3.Out",
+  y: -100,
+  scrollTrigger: {
+    trigger: easyToUseTitle,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(easyToUseText, {
+  duration: 1,
+  opacity: 0,
+  ease: "power3.Out",
+  y: 100,
+  scrollTrigger: {
+    trigger: easyToUseText,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(easyToUseButton, {
+  duration: 1,
+  opacity: 0,
+  delay: 1,
+  ease: "power3.Out",
+  scrollTrigger: {
+    trigger: easyToUseButton,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(easyToUseSvg, {
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  ease: "power3.Out",
+  scrollTrigger: {
+    trigger: easyToUseSvg,
+    start: "top 80%"
+  }
+});
+},{"gsap":"../node_modules/gsap/index.js","gsap/all":"../node_modules/gsap/all.js"}],"js/price.js":[function(require,module,exports) {
+"use strict";
+
+var _gsap = _interopRequireDefault(require("gsap"));
+
+var _all = require("gsap/all");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var priceTitle = document.getElementById("pricetitle");
+var priceSubtitle = document.getElementById("pricesubtitle");
+var priceCard = document.getElementById("pricecard");
+
+_gsap.default.registerPlugin(_all.ScrollTrigger);
+
+_gsap.default.from(priceCard, {
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  scrollTrigger: {
+    trigger: priceCard,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(priceTitle, {
+  duration: 1,
+  opacity: 0,
+  x: 200,
+  scrollTrigger: {
+    trigger: priceTitle,
+    start: "top 80%"
+  }
+});
+
+_gsap.default.from(priceSubtitle, {
+  duration: 1,
+  opacity: 0,
+  x: -200,
+  scrollTrigger: {
+    trigger: priceSubtitle,
+    start: "top 70%"
+  }
+});
 },{"gsap":"../node_modules/gsap/index.js","gsap/all":"../node_modules/gsap/all.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -14524,7 +14641,11 @@ require("./hero");
 require("./benefits");
 
 require("./helpyou");
-},{"./menu":"js/menu.js","./hero":"js/hero.js","./benefits":"js/benefits.js","./helpyou":"js/helpyou.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./easytouse");
+
+require("./price");
+},{"./menu":"js/menu.js","./hero":"js/hero.js","./benefits":"js/benefits.js","./helpyou":"js/helpyou.js","./easytouse":"js/easytouse.js","./price":"js/price.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14552,7 +14673,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54050" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56423" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

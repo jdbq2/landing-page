@@ -1,9 +1,18 @@
 .header {
   min-width: 100%;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   overflow: hidden;
   background: $white;
@@ -14,6 +23,9 @@
   @include respond-to(map-get($bp, l)) {
     position: initial;
     min-height: 20%;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -ms-flex-direction: initial;
     flex-direction: initial;
     left: 0;
   }
@@ -34,16 +46,32 @@
     }
   }
   &__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 10px;
     &__menu {
       min-width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       @include respond-to(map-get($bp, l)) {
+        -webkit-box-orient: initial;
+        -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
         flex-direction: initial;
       }
 
@@ -55,7 +83,12 @@
         font-weight: 900;
         margin: 10px;
         list-style: none;
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        transition: -webkit-transform 0.3s ease-in-out;
+        -o-transition: transform 0.3s ease-in-out;
         transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out,
+          -webkit-transform 0.3s ease-in-out;
         @include respond-to(map-get($bp, m)) {
           font-size: fs(l);
           margin: 30px;
@@ -65,6 +98,8 @@
           margin: 10px;
         }
         &:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: $darkGray;
         }
@@ -73,6 +108,7 @@
   }
   &__button {
     @extend %transparent-btn;
+    cursor: pointer;
     @include respond-to(map-get($bp, m)) {
       width: 330px;
       height: 80px;
@@ -83,6 +119,8 @@
       height: initial;
       font-size: fs(m);
     }
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     &:hover {
       background-color: $secondary;

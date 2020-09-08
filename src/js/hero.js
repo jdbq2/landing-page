@@ -2,13 +2,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const heroContainer = document.getElementById("hero");
 const heroTitle = document.getElementById("heroTitle");
 const heroText = document.getElementById("heroText");
 const heroForm = document.getElementById("heroForm");
 const heroConditions = document.getElementById("heroConditions");
 const heroSvg = document.getElementById("heroSvg");
-
 
 gsap.from([heroTitle, heroText], {
   duration: 1.5,

@@ -1,0 +1,113 @@
+.footer {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid $white;
+  padding: 20px;
+  &__about {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    @include respond-to(map-get($bp, l)) {
+      -webkit-box-orient: initial;
+      -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+      flex-direction: initial;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+    &__title {
+      @extend %text;
+      width: 100%;
+      font-family: $principalFont;
+      font-size: fs(l);
+      font-style: italic;
+      color: $darkGray;
+      margin: 5px;
+      @include respond-to(map-get($bp, l)) {
+        width: 10%;
+      }
+    }
+    &__text {
+      @extend %text;
+      width: 100%;
+      font-family: $secondaryFont;
+      font-size: fs(m);
+      font-style: italic;
+      color: $ligthGray;
+      @include respond-to(map-get($bp, l)) {
+        width: 30%;
+      }
+    }
+    &__links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      list-style: none;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 20px;
+      @include respond-to(map-get($bp, l)) {
+        -webkit-box-orient: initial;
+        -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+        flex-direction: initial;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        width: 40%;
+      }
+      &__item {
+        text-decoration: none;
+        margin: 10px 0px 10px 0px;
+        color: $darkGray;
+        font-family: $secondaryFont;
+        font-size: fs(m);
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+    &__contact {
+      @extend %sm-btn;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      @include respond-to(map-get($bp, m)) {
+        width: 40%;
+      }
+      @include respond-to(map-get($bp, l)) {
+        width: 20%;
+      }
+    }
+  }
+  &__copyrigth__text {
+    margin: 10px;
+    color: $black;
+    font-family: $secondaryFont;
+    font-size: fs(s);
+  }
+}

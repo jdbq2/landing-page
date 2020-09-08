@@ -1,0 +1,136 @@
+.price {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+  &__title {
+    @extend %text;
+    font-family: $principalFont;
+    font-size: fs(l);
+    font-weight: 500;
+    text-align: center;
+    color: $black;
+    @include respond-to(map-get($bp, m)) {
+      font-size: fs(xl);
+    }
+  }
+  &__subtitle {
+    @extend %text;
+    width: 80%;
+    font-family: $secondaryFont;
+    font-size: fs(m);
+    text-align: center;
+    color: $ligthGray;
+    margin-top: 10px;
+  }
+  &__card {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    border-radius: $borderRadious;
+    padding: 15px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      -webkit-box-shadow: $shadow;
+      box-shadow: $shadow;
+    }
+    @include respond-to(map-get($bp, m)) {
+      width: 50%;
+    }
+    @include respond-to(map-get($bp, l)) {
+      width: 30%;
+    }
+    &__price {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-family: $principalFont;
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
+      justify-items: center;
+      &__symbol {
+        font-size: fs(m);
+        color: $darkGray;
+        font-weight: bolder;
+      }
+      &__number {
+        color: $secondary;
+        font-size: 800%;
+        font-weight: bolder;
+      }
+      &__date {
+        font-size: fs(m);
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        color: $darkGray;
+      }
+    }
+    &__benefits {
+      &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        color: $black;
+        font-family: $secondaryFont;
+        margin: 20px 0 20px 0;
+        font-size: fs(m);
+        font-weight: 800;
+        &__icon {
+          margin-left: 10px;
+        }
+      }
+      &__item:nth-child(3n) {
+        margin: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $ligthGray;
+      }
+    }
+    &__button {
+      @extend %sm-btn;
+      margin: 30px 0 20px 0;
+      cursor: pointer;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+      transition: -webkit-transform 0.5s ease-in-out;
+      -o-transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+}

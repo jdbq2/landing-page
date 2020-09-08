@@ -1,8 +1,17 @@
 .hero {
   min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 90px;
   background: transparent;
@@ -11,13 +20,16 @@
   }
   @include respond-to(map-get($bp, l)) {
     margin-top: 80px;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -ms-flex-direction: initial;
     flex-direction: initial;
   }
   &__svg {
     width: 90%;
     margin-top: 60px;
     @include respond-to(map-get($bp, m)) {
-      max-width: 70%;
+      max-width: 60%;
     }
     @include respond-to(map-get($bp, l)) {
       max-width: 50%;
@@ -26,9 +38,18 @@
 }
 
 .heroWraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   @include respond-to(map-get($bp, l)) {
     max-width: 40%;
@@ -52,13 +73,31 @@
   &__form {
     width: 90%;
     height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border: 1px solid $darkGray;
     border-radius: $borderRadious;
     margin-top: 20px;
-
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      -webkit-box-shadow: $shadow;
+      box-shadow: $shadow;
+    }
+    @include respond-to(map-get($bp, m)) {
+      width: 60%;
+    }
+    @include respond-to(map-get($bp, l)) {
+      width: 90%;
+    }
     &__input {
       border-style: none;
       width: 70%;
@@ -77,11 +116,18 @@
       min-width: 40%;
       margin: 0;
       margin-right: 5px;
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: -webkit-transform 0.3s;
+      -o-transition: transform 0.3s;
       transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s;
+      cursor: pointer;
       @include respond-to(map-get($bp, s)) {
         font-size: fs(m);
       }
       &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
         transform: scale(1.2);
       }
     }
@@ -92,5 +138,11 @@
     font-family: $secondaryFont;
     font-size: fs(s);
     margin-top: 5px;
+    @include respond-to(map-get($bp, m)) {
+      text-align: center;
+    }
+    @include respond-to(map-get($bp, l)) {
+      text-align: initial;
+    }
   }
 }

@@ -9,6 +9,7 @@
   padding: 10px;
   color: $white;
   background: $gradient;
+  -webkit-box-shadow: $shadow;
   box-shadow: $shadow;
   margin: 10px;
 }
@@ -23,6 +24,7 @@
   padding: 10px;
   color: $white;
   background: $gradient;
+  -webkit-box-shadow: $shadow;
   box-shadow: $shadow;
   margin: 10px;
 }
@@ -37,6 +39,7 @@
   padding: 10px;
   color: $secondary;
   background: transparent;
+  -webkit-box-shadow: $shadow;
   box-shadow: $shadow;
   margin: 10px;
 }

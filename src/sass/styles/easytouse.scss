@@ -1,0 +1,85 @@
+.easytouse {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  &__info {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 15px;
+    &__title {
+      @extend %text;
+      font-family: $principalFont;
+      font-size: fs(l);
+      font-weight: 400;
+      color: $black;
+      text-align: center;
+      @include respond-to(map-get($bp, l)) {
+        font-size: fs(xl);
+      }
+    }
+    &__text {
+      @extend %text;
+      font-family: $secondaryFont;
+      font-size: fs(m);
+      color: $black;
+      margin: 10px;
+      text-align: center;
+      @include respond-to(map-get($bp, l)) {
+        font-size: fs(l);
+      }
+    }
+    &__button {
+      @extend %sm-btn;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+      transition: -webkit-transform 0.5s ease-in-out;
+      -o-transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+      cursor: pointer;
+      @include respond-to(map-get($bp, l)) {
+        min-width: 250px;
+        min-height: 50px;
+        font-size: fs(l);
+        margin-top: 40px;
+      }
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__svg {
+    width: 90%;
+    margin: 20px 0px 0px 20px;
+    @include respond-to(map-get($bp, m)) {
+      width: 60%;
+    }
+    @include respond-to(map-get($bp, l)) {
+      width: 50%;
+    }
+  }
+}
