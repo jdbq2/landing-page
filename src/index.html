@@ -43,9 +43,11 @@
           </a>
         </ul>
       </nav>
-      <button class="header__button">Download the App</button>
+      <button class="header__button" aria-label="download the app">
+        Download the App
+      </button>
     </header>
-    <button class="mobile__trigger" id="mobileMenu">
+    <button class="mobile__trigger" id="mobileMenu" aria-label="menu">
       <div id="item1" class="mobile__trigger__item--1"></div>
       <div id="item2" class="mobile__trigger__item--2"></div>
       <div id="item3" class="mobile__trigger__item--3"></div>
@@ -62,14 +64,21 @@
             profile. Get followers, likes, comments and engagement.
           </p>
           <form id="heroForm" action="" class="heroWraper__form">
+            <label for="mailinput" style="display: none"
+              >mail input to get a free trial</label
+            >
             <input
               class="heroWraper__form__input"
               type="email"
-              name=""
-              id=""
+              name="mailinput"
+              id="mailinput"
               placeholder="Enter email addres.."
             />
-            <button class="heroWraper__form__button" type="submit">
+            <button
+              class="heroWraper__form__button"
+              type="submit"
+              aria-label="submit"
+            >
               Try for free
             </button>
           </form>
@@ -959,7 +968,11 @@
             after you´ve chosen your targets. Sit back and watch the organic
             growth.
           </p>
-          <button id="easytousebutton" class="easytouse__info__button">
+          <button
+            aria-label="get started"
+            id="easytousebutton"
+            class="easytouse__info__button"
+          >
             Get started
           </button>
         </div>
@@ -1347,7 +1360,7 @@
               <span class="price__card__benefits__item__icon">✅</span>
             </div>
           </div>
-          <button class="price__card__button">
+          <button aria-label="try free for 5 days" class="price__card__button">
             Try free <strong>for 5 days</strong>
           </button>
         </div>
@@ -1369,7 +1382,9 @@
             <li>Privacy</li>
           </a>
         </ul>
-        <button class="footer__about__contact">Contact Us</button>
+        <button aria-label="contact us" class="footer__about__contact">
+          Contact Us
+        </button>
       </div>
       <div class="footer__copyrigth">
         <p class="footer__copyrigth__text">
