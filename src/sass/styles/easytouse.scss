@@ -79,7 +79,7 @@
       width: 60%;
     }
     @include respond-to(map-get($bp, l)) {
-      width: 50%;
+      width: 40%;
     }
   }
 }

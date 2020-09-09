@@ -32,7 +32,7 @@
       max-width: 60%;
     }
     @include respond-to(map-get($bp, l)) {
-      max-width: 50%;
+      max-width: 40%;
     }
   }
 }
@@ -82,7 +82,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    border: 1px solid $darkGray;
+    border: 1px solid $ligthGray;
     border-radius: $borderRadious;
     margin-top: 20px;
     -webkit-transition: all 0.3s ease-in-out;
