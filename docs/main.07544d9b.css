@@ -149,11 +149,6 @@ html {
   font-weight: 900;
   margin: 10px;
   list-style: none;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 @media only screen and (min-width: 700px) {
   .header__nav__menu__item {
@@ -167,11 +162,15 @@ html {
     margin: 10px;
   }
 }
-.header__nav__menu__item:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  color: #8a817c;
+.header__nav__menu__item a {
+  text-decoration: none;
+  color: #463f3a;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header__nav__menu__item a:hover {
+  color: #6c63ff;
 }
 .header__button {
   cursor: pointer;
@@ -937,7 +936,7 @@ html {
   font-family: "Ubuntu", sans-serif;
   font-size: 320%;
   font-style: italic;
-  color: #8a817c;
+  color: #463f3a;
   margin: 5px;
 }
 @media only screen and (min-width: 1000px) {
@@ -950,7 +949,7 @@ html {
   font-family: "Lora", serif;
   font-size: 200%;
   font-style: italic;
-  color: #bcb8b1;
+  color: #8a817c;
 }
 @media only screen and (min-width: 1000px) {
   .footer__about__text {
@@ -991,7 +990,7 @@ html {
   font-size: 200%;
 }
 .footer__about__links__item:hover {
-  color: #463f3a;
+  color: #6c63ff;
 }
 .footer__about__contact {
   -webkit-transition: all 0.3s ease-in-out;

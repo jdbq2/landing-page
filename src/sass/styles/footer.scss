@@ -39,7 +39,7 @@
       font-family: $principalFont;
       font-size: fs(l);
       font-style: italic;
-      color: $darkGray;
+      color: $black;
       margin: 5px;
       @include respond-to(map-get($bp, l)) {
         width: 10%;
@@ -51,7 +51,7 @@
       font-family: $secondaryFont;
       font-size: fs(m);
       font-style: italic;
-      color: $ligthGray;
+      color: $darkGray;
       @include respond-to(map-get($bp, l)) {
         width: 30%;
       }
@@ -86,7 +86,7 @@
         font-family: $secondaryFont;
         font-size: fs(m);
         &:hover {
-          color: $black;
+          color: $secondary;
         }
       }
     }
