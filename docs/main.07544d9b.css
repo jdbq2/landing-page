@@ -102,7 +102,7 @@ html {
 }
 @media only screen and (min-width: 1200px) {
   .header__logo {
-    width: 6%;
+    width: 5%;
   }
 }
 .header__logo img {
@@ -319,7 +319,7 @@ html {
 }
 @media only screen and (min-width: 1000px) {
   .hero__svg {
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 
@@ -369,7 +369,7 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #8a817c;
+  border: 1px solid #bcb8b1;
   border-radius: 20px;
   margin-top: 20px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -484,16 +484,13 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  border: 5px solid #f4f3ee;
   border-radius: 20px;
   padding: 10px;
   margin: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-.benefits__1:hover, .benefits__2:hover, .benefits__3:hover {
-  -webkit-box-shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
-  box-shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
 }
 @media only screen and (min-width: 700px) {
   .benefits__1, .benefits__2, .benefits__3 {
@@ -573,7 +570,7 @@ html {
 }
 @media only screen and (min-width: 1000px) {
   .helpyouto__svg {
-    width: 45%;
+    width: 40%;
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
@@ -757,7 +754,7 @@ html {
 }
 @media only screen and (min-width: 1000px) {
   .easytouse__svg {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -814,15 +811,12 @@ html {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 30px 0 30px 0;
+  border: 5px solid #f4f3ee;
   border-radius: 20px;
   padding: 15px;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-.price__card:hover {
-  -webkit-box-shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
-  box-shadow: -1px 0px 45px -17px rgba(0, 0, 0, 0.74);
 }
 @media only screen and (min-width: 700px) {
   .price__card {
