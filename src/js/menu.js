@@ -64,6 +64,7 @@ function handleMenuClick() {
         },
       },
     });
+    document.getElementsByTagName("html")[0].style.overflow = "hidden";
   } else {
     gsap.to(MENU, {
       duration: 1,
@@ -84,5 +85,6 @@ function handleMenuClick() {
         y: 0,
       },
     });
+    document.getElementsByTagName("html")[0].style.overflow = "auto";
   }
 }
